@@ -30,6 +30,7 @@
 	"scroll_past_end": false,
 	"show_encoding": true,
 	"show_full_path": false,
+	"tab_size": 2,
 	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
