@@ -1,2 +1,3 @@
-# my-subl3-settings
-My SublimeText 3 settings
+# my-dot-files-and-settings
+
+My dot files and settings.
