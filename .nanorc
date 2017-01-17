@@ -1,0 +1,46 @@
+# Syntax highlighting
+# Syntax files from https://github.com/scopatz/nanorc
+include "~/.nano/c.nanorc"
+include "~/.nano/cmake.nanorc"
+include "~/.nano/coffeescript.nanorc"
+include "~/.nano/conf.nanorc"
+include "~/.nano/csharp.nanorc"
+include "~/.nano/css.nanorc"
+include "~/.nano/dot.nanorc"
+include "~/.nano/Dockerfile.nanorc"
+include "~/.nano/fish.nanorc"
+include "~/.nano/git.nanorc"
+include "~/.nano/gitcommit.nanorc"
+include "~/.nano/go.nanorc"
+include "~/.nano/html.nanorc"
+include "~/.nano/javascript.nanorc"
+include "~/.nano/js.nanorc"
+include "~/.nano/json.nanorc"
+include "~/.nano/keymap.nanorc"
+include "~/.nano/makefile.nanorc"
+include "~/.nano/man.nanorc"
+include "~/.nano/markdown.nanorc"
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/nginx.nanorc"
+include "~/.nano/pkg-config.nanorc"
+include "~/.nano/pkgbuild.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/ruby.nanorc"
+include "~/.nano/rust.nanorc"
+include "~/.nano/scala.nanorc"
+include "~/.nano/sh.nanorc"
+include "~/.nano/sql.nanorc"
+include "~/.nano/swift.nanorc"
+include "~/.nano/systemd.nanorc"
+include "~/.nano/xml.nanorc"
+include "~/.nano/yaml.nanorc"
+
+set smooth
+set autoindent
+set tabsize 2
+set tabstospaces
+set mouse
+set constantshow
+set justifytrim
+set linenumbers
+set softwrap
