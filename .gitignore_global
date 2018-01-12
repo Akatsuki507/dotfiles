@@ -1,0 +1,9 @@
+# Ignore SublimeText-specific files
+*.sublime-project
+*.sublime-workspace
+
+# Ignore VSCode-specific config
+.vscode/
+
+# Ignore asdf-specific files
+.tool-versions

@@ -1,0 +1,42 @@
+[user]
+	name = Angel Perez
+	email = iAngel.p93@gmail.com
+[core]
+	editor = nano
+	excludesfile = /home/aitbw/.gitignore_global
+[commit]
+	template = /home/aitbw/.git_commit_msg.txt
+	gpgsign = true
+[alias]
+	commits = log origin/master..HEAD # Commits authored by me on current branch
+	files = diff-tree --no-commit-id --name-only -r # List of files included on a commit
+	unstage = reset HEAD
+	ignore = update-index --assume-unchanged
+	unignore = update-index --no-assume-unchanged
+	soft = reset --soft HEAD^
+	hard = reset --hard
+	rmc = rm --cached
+	cam = commit -am
+	co = checkout
+	cob = checkout -b
+	rba = rebase --abort
+	rbc = rebase --continue
+	sp = stash pop
+	sl = stash list
+	rom = rebase origin/master
+	sit = stash --include-untracked
+	cane = commit --amend --no-edit
+	ca = commit --amend
+	pf = push -f
+	merged = branch --merged master
+	bd = branch -D
+	cm = commit -m
+	dc = diff --cached
+	conflicts = diff --name-only --diff-filter=U
+	reword = commit -v --amend
+	unpushed = log --branches --not --remotes
+	ba = branch -a
+[color]
+	ui = true
+[push]
+	default = current
