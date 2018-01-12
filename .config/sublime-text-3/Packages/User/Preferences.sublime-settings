@@ -1,26 +1,74 @@
+# List of packages installed
+# * Package Control
+# * A File Icon
+# * AdvancedNewFile
+# * All Autocomplete
+# * ayu (Theme)
+# * Babel
+# * Better CoffeeScript
+# * BracketHighlighter
+# * Color Highlighter
+# * Dictionaries (See https://github.com/titoBouzout/Dictionaries)
+# * Diffy
+# * Emmet
+# * ERB Snippets
+# * GitGutter
+# * Origami
+# * Rails Partial
+# * SideBarEnhancements
+# * SublimeLinter (contrib-scss-lint, contrib-standard, rubocop)
+# * Sync View Scroll
+# * Syntax Highlighting for Sass
+# * Vuejs Snippets
 {
+	"added_words":
+	[
+		"Admin"
+	],
 	"auto_complete_commit_on_tab": true,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"node_modules/*",
+		"tmp/*",
+		"log/*",
+		"coverage/*",
+		"dist/*",
+		".keep"
+	],
 	"caret_style": "phase",
-	"color_scheme": "Packages/Enki Theme/scheme/Enki-Alt.tmTheme",
+	"color_scheme": "Packages/ayu/ayu-dark.tmTheme",
 	"copy_with_empty_selection": false,
-	"enki_theme_accent_cyan": true,
-	"enki_theme_color_expanded_folder": true,
-	"enki_theme_compact_panel": true,
-	"enki_theme_disable_folder_animation": true,
-	"enki_theme_panel_separator": true,
-	"enki_theme_small_statusbar": true,
-	"enki_theme_small_tab": true,
-	"enki_theme_tabs_autowidth": true,
-	"enki_theme_tabs_separator": true,
-	"enki_theme_tree_headings": true,
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
-	"font_face": "Hack Regular",
-	"font_size": 10,
+	"font_face": "Monaco",
+	"font_size": 16,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
 		"Vintage"
+	],
+	"ignored_words":
+	[
+		"confirmable",
+		"downcase",
+		"omniauthable",
+		"timeoutable",
+		"titleize",
+		"usernames"
 	],
 	"indent_guide_options":
 	[
@@ -30,12 +78,16 @@
 	"line_padding_bottom": 3,
 	"line_padding_top": 3,
 	"overlay_scroll_bars": "enabled",
+	"preview_on_click": false,
 	"scroll_past_end": false,
 	"show_encoding": true,
-	"show_full_path": false,
+	"show_full_path": true,
 	"tab_size": 2,
-	"theme": "Enki-Theme.sublime-theme",
+	"theme": "ayu-dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"wide_caret": true
+	"ui_separator": true,
+	"ui_wide_scrollbars": true,
+	"wide_caret": true,
+	"word_wrap": true
 }
