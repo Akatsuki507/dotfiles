@@ -1,0 +1,76 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.fontFamily": "'Inconsolata', 'Fira Code', 'Monaco'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 24,
+    "editor.tabSize": 2,
+    "editor.tabCompletion": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.minimap.enabled": false,
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.emptySelectionClipboard": false,
+    "editor.wordBasedSuggestions": false,
+    "editor.cursorBlinking": "phase",
+    "editor.mouseWheelZoom": false,
+    "editor.cursorStyle": "line-thin",
+    "editor.folding": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "emmet.includeLanguages": {
+        "erb": "html",
+        "markdown": "html"
+    },
+    "explorer.openEditors.visible": 0,
+    "explorer.autoReveal": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    },
+    "ruby.lint": {
+        "rubocop": true
+    },
+    "[rust]": {
+        "editor.tabSize": 4
+    },
+    "search.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.github": true,
+        "**/.bundle": true,
+        "**/node_modules": true,
+        "**/tmp": true,
+        "**/log": true,
+        "**/dist": true,
+        "**/.keep": true,
+        "**/coverage": true
+    },
+    "sublimeTextKeymap.promptV3Features": true,
+    "terminal.external.linuxExec": "sakura",
+    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.cursorBlinking": true,
+    "typescript.tsserver.log": "verbose",
+    "typescript.npm": "/home/aitbw/n/bin/npm",
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "window.zoomLevel": 0,
+    "workbench.editor.enablePreview": false,
+    "workbench.colorTheme": "Ayu Dark",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.startupEditor": "none"
+}
