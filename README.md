@@ -1,3 +1,3 @@
-# my-dot-files-and-settings
+# Angel Perez's (AITBW) dotfiles
 
-My dot files and settings.
+Hello there, these are my dotfiles. Nothing interesting to see here but feel free to check out how I like my Linux. :)
