@@ -96,6 +96,7 @@ function extract --description 'Extract a .tar file properly'
   tar -xvzf $argv
 end
 
+# Bundler aliases
 function bx --description 'Runs Ruby-based commands in current bundle context'
   bundle exec $argv
 end
@@ -110,6 +111,7 @@ function mimimi
   ruby ~/Code/playground/la_taguara_scripts/mimimi_speak.rb
 end
 
+# RSpec aliases
 function rmodified --description 'Runs only modified specs using git status'
   bundle exec rspec (git status | grep spec | grep "modified:" | cut -b 14-)
 end
@@ -121,6 +123,16 @@ end
 function testloop --description 'Runs RSpec tests on a loop for N times'
   for n in (seq 1 $argv[1])
     echo "Test try #$n"
-    bundle exec rspec $argv[2]
+    bundle exec rspec $argv[2..-1]
   end
+end
+
+# Baton alises
+# You need to install https://github.com/joshuathompson/baton first
+function bp --description 'Resumes Spotify playback'
+  baton play
+end
+
+function bs --description 'Pauses Spotify playback'
+  baton pause
 end
