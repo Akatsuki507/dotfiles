@@ -36,6 +36,11 @@
 	reword = commit -v --amend
 	unpushed = log --branches --not --remotes
 	ba = branch -a
+	rename = branch -m
+	lps = log --pretty=short
+	cp = cherry-pick
+	cpc = cherry-pick --continue
+	cpa = cherry-pick --abort
 [color]
 	ui = true
 [push]
