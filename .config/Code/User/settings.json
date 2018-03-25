@@ -2,9 +2,13 @@
 {
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "editor.fontFamily": "'Inconsolata', 'Fira Code', 'Monaco'",
+    "editor.autoIndent": true,
+    "editor.fontFamily": "'Monaco', 'Fira Code', 'Inconsolata'",
     "editor.fontLigatures": true,
-    "editor.fontSize": 24,
+    "editor.fontSize": 18,
+    "editor.fontWeight": "400",
+    "editor.letterSpacing": 0.5,
+    "editor.lineHeight": 25,
     "editor.tabSize": 2,
     "editor.tabCompletion": true,
     "editor.rulers": [
@@ -23,8 +27,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.snippetSuggestions": "top",
     "emmet.includeLanguages": {
-        "erb": "html",
-        "markdown": "html"
+        "erb": "html"
     },
     "explorer.openEditors.visible": 0,
     "explorer.autoReveal": false,
@@ -44,6 +47,9 @@
     "[rust]": {
         "editor.tabSize": 4
     },
+    "[yaml]": {
+        "files.insertFinalNewline": false
+    },
     "search.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -51,17 +57,22 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/.github": true,
+        "**/.vscode": true,
         "**/.bundle": true,
         "**/node_modules": true,
         "**/tmp": true,
         "**/log": true,
         "**/dist": true,
         "**/.keep": true,
-        "**/coverage": true
+        "**/coverage": true,
+        "**/.mdlrc": true,
+        "**/.byebug_history": true,
+        "**/*.sublime-project": true,
+        "**/*.sublime-workspace": true
     },
     "sublimeTextKeymap.promptV3Features": true,
     "terminal.external.linuxExec": "sakura",
-    "terminal.integrated.fontFamily": "Hack",
+    "terminal.integrated.fontFamily": "Source Code Pro",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.cursorBlinking": true,
     "typescript.tsserver.log": "verbose",
@@ -72,5 +83,6 @@
     "workbench.colorTheme": "Ayu Dark",
     "workbench.iconTheme": "vscode-icons",
     "workbench.editor.revealIfOpen": true,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "gitlens.keymap": "alternate"
 }
