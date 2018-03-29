@@ -136,3 +136,30 @@ end
 function bs --description 'Pauses Spotify playback'
   baton pause
 end
+
+# Multimedia functions
+# For this script to work, you'll need the following packages first:
+# 1. LAME encoder/decoder, v3.98  or higher
+# 2. FLAC encoder/decoder, v1.3.2 or higher
+# 3. GNU Parallel
+# This script is intended to be used on the folder where the .flac
+# files you want to convert are located
+function ftm --description 'Converts .flac files to .mp3'
+  mkdir tmp/ mp3/
+  # Flags used for processing .flac files:
+  # -d              -> Decode the given file into .wav
+  # --output-prefix -> Save the final file to tmp/ folder
+  parallel flac -d --output-prefix=tmp/ {} ::: ./*.flac
+  # Flags used for processing .wav files:
+  # -r                    -> Allow raw PCM files to be processed
+  # -m j                  -> 'Joint stereo' channel setting
+  # -V 0                  -> Enable VBR at the highest quality
+  # -q 0                  -> Use the best algorithms to achieve the highest quality given the file's bitrate
+  # --lowpass 19.5        -> Cutoff frequencies above 19.5 kHz
+  # -b 32                 -> Sampling frecuency
+  # --vbr-new             -> Latest VBR algorithm, faster than `--vbr-old`
+  # --replaygain-accurate -> Determine real peak sample
+  # --out-dir mp3/        -> Output the converted files to mp3/ folder
+  parallel lame -r {} -m j -V 0 -q 0 --lowpass 19.5 --vbr-new -b 32 --replaygain-accurate --out-dir mp3/ ::: ./tmp/*.wav
+  rm -rf tmp/
+end
