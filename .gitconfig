@@ -1,6 +1,7 @@
 [user]
 	name = Angel Perez
 	email = iAngel.p93@gmail.com
+	signingkey = 81BB83DECAEFB52A
 [core]
 	editor = nano
 	excludesfile = /home/aitbw/.gitignore_global
