@@ -1,48 +1,48 @@
 [user]
-	name = Angel Perez
-	email = iAngel.p93@gmail.com
-	signingkey = 81BB83DECAEFB52A
+	name       = Angel Perez
+	email      = iAngel.p93@gmail.com
+	signingkey = 81BB83DECAEFB52A # Public GPG key (needed to automatically sign commits)
 [core]
-	editor = nano
+	editor       = nano
 	excludesfile = /home/aitbw/.gitignore_global
 [commit]
-	template = /home/aitbw/.git_commit_msg.txt
-	gpgsign = true
+	template  = /home/aitbw/.git_commit_msg.txt         # Template for commit messages
+	gpgsign   = true                                    # Automatically sign commits
 [alias]
-	commits = log origin/master..HEAD # Commits authored by me on current branch
-	files = diff-tree --no-commit-id --name-only -r # List of files included on a commit
-	unstage = reset HEAD
-	ignore = update-index --assume-unchanged
-	unignore = update-index --no-assume-unchanged
-	soft = reset --soft HEAD^
-	hard = reset --hard
-	rmc = rm --cached
-	cam = commit -am
-	co = checkout
-	cob = checkout -b
-	rba = rebase --abort
-	rbc = rebase --continue
-	sp = stash pop
-	sl = stash list
-	rom = rebase origin/master
-	sit = stash --include-untracked
-	cane = commit --amend --no-edit
-	ca = commit --amend
-	pf = push -f
-	merged = branch --merged master
-	bd = branch -D
-	cm = commit -m
-	dc = diff --cached
-	conflicts = diff --name-only --diff-filter=U
-	reword = commit -v --amend
-	unpushed = log --branches --not --remotes
-	ba = branch -a
-	rename = branch -m
-	lps = log --pretty=short
-	cp = cherry-pick
-	cpc = cherry-pick --continue
-	cpa = cherry-pick --abort
+	commits   = log origin/master..HEAD                 # List commits authored by me on current branch
+	files     = diff-tree --no-commit-id --name-only -r # List files included in a commit
+	unstage   = reset HEAD                              # Unstage files and/or folders
+	ignore    = update-index --assume-unchanged         # Ignore files and/or folders temporarily
+	unignore  = update-index --no-assume-unchanged      # Reverts above alias
+	soft      = reset --soft HEAD^                      # Soft resets latest commit
+	hard      = reset --hard                            # Hard resets current branch based on a commit's SHA
+	rmc       = rm --cached                             # Remove cached files and/or folders (does not actually removes the files/folders)
+	cam       = commit -am                              # Stage dirty files/folders and commits them
+	co        = checkout                                # Reset dirty files/folders to its original state or moves to a different branch
+	cob       = checkout -b                             # Checkout to a new branch based on the current branch's state
+	rba       = rebase --abort                          # Abort an ongoing rebase
+	rbc       = rebase --continue                       # Continue an ongoing rebase
+	sp        = stash pop                               # Pop a stash, deleting its reference
+	sl        = stash list                              # List of the saved stashes and its references
+	rom       = rebase origin/master                    # Rebase a branch based on the current state of the master branch
+	sit       = stash --include-untracked               # Stash dirty files/folders, incl. untracked files
+	cane      = commit --amend --no-edit                # Amend commit without editing its message
+	ca        = commit --amend                          # Amend commit and edit its message
+	pf        = push -f                                 # Force push to the current branch
+	merged    = branch --merged master                  # List merged local branches
+	bd        = branch -D                               # Delete branch
+	cm        = commit -m                               # Commit current staged files
+	dc        = diff --cached                           # Diff for dirty and staged files
+	conflicts = diff --name-only --diff-filter=U        # List conflicting files during a merge/rebase
+	reword    = commit -v --amend                       # Same as 'ca' alias but more verbose
+	unpushed  = log --branches --not --remotes          # List unpushed-to-remote branches
+	ba        = branch -a                               # Show local branches and all remotes
+	rename    = branch -m                               # Rename branch
+	lps       = log --pretty=short                      # List of all commits done on current branch with minimal information
+	cp        = cherry-pick                             # Cherry picks a commit
+	cpc       = cherry-pick --continue                  # Continue an ongoing cherry-picking
+	cpa       = cherry-pick --abort                     # Abort an ongoing cherry-picking
 [color]
 	ui = true
 [push]
-	default = current
+	default = current # Push the current branch to a remote of the same name
