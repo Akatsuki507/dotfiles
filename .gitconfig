@@ -42,6 +42,10 @@
 	cp        = cherry-pick                             # Cherry picks a commit
 	cpc       = cherry-pick --continue                  # Continue an ongoing cherry-picking
 	cpa       = cherry-pick --abort                     # Abort an ongoing cherry-picking
+	bs        = bisect start                            # Start a bisection on current branch
+	bg        = bisect good                             # Mark currently bisected commit as good
+	bb        = bisect bad                              # Mark currently bisected commit as bad
+	br        = bisect reset                            # Reset currently bisected branch to its original state
 [color]
 	ui = true
 [push]
