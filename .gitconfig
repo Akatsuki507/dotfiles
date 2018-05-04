@@ -46,6 +46,7 @@
 	bg        = bisect good                             # Mark currently bisected commit as good
 	bb        = bisect bad                              # Mark currently bisected commit as bad
 	br        = bisect reset                            # Reset currently bisected branch to its original state
+	ma        = merge --abort                           # Abort an ongoing merge
 [color]
 	ui = true
 [push]
