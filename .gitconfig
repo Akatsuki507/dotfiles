@@ -50,6 +50,7 @@
 	sdq       = stash drop --quiet                      # Remove a stash entry without output to the STDOUT
 	rup       = remote update --prune                   # Update all remotes from your repo, removing those that were deleted as well
 	prom      = pull origin master --rebase             # Pulls latest revision from master and rebases the current branch
+	psu       = push --set-upstream                     # Push to current branch with upstream tracking reference
 [color]
 	ui = true
 [push]
