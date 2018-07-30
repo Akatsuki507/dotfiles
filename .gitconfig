@@ -55,3 +55,5 @@
 	ui = true
 [push]
 	default = current # Push the current branch to a remote of the same name
+[rebase]
+  autoStash = true
