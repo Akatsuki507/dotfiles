@@ -51,6 +51,9 @@
 	rup       = remote update --prune                   # Update all remotes from your repo, removing those that were deleted as well
 	prom      = pull origin master --rebase             # Pulls latest revision from master and rebases the current branch
 	psu       = push --set-upstream                     # Push to current branch with upstream tracking reference
+	rb        = rebase                                  # Base command for rebasing
+	rbi       = rebase -i                               # Start an interactive rebase
+	rbs       = rebase --skip                           # Skip a patch (commit) when rebasing
 [color]
 	ui = true
 [push]
