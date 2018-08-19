@@ -151,7 +151,6 @@ function ftm --description 'Converts .flac files to .mp3'
   # --output-prefix -> Save the final file to tmp/ folder
   parallel flac -d --output-prefix=tmp/ {} ::: ./*.flac
   # Flags used for processing .wav files:
-  # -r                    -> Allow raw PCM files to be processed
   # -m j                  -> 'Joint stereo' channel setting
   # -V 0                  -> Enable VBR at the highest quality
   # -q 0                  -> Use the best algorithms to achieve the highest quality given the file's bitrate
@@ -160,6 +159,6 @@ function ftm --description 'Converts .flac files to .mp3'
   # --vbr-new             -> Latest VBR algorithm, faster than `--vbr-old`
   # --replaygain-accurate -> Determine real peak sample
   # --out-dir mp3/        -> Output the converted files to mp3/ folder
-  parallel lame -r {} -m j -V 0 -q 0 --lowpass 19.5 --vbr-new -b 32 --replaygain-accurate --out-dir mp3/ ::: ./tmp/*.wav
+  parallel lame {} -m j -V 0 -q 0 --lowpass 19.5 --vbr-new -b 32 --replaygain-accurate --out-dir mp3/ ::: ./tmp/*.wav
   rm -rf tmp/
 end
