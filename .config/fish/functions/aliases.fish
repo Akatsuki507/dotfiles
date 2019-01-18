@@ -1,10 +1,10 @@
-# pacman/trizen aliases
+# pacman/yay aliases
 function search --description 'Search a package on Manjaro repos or AUR'
   switch $argv[1]
     case 1
       pacman -Ss $argv[2..-1]
     case 2
-      trizen -Ss --aur $argv[2..-1]
+      yay -Ss --aur $argv[2..-1]
   end
 end
 
@@ -13,7 +13,7 @@ function install --description 'Install a package from Manjaro repos or AUR'
     case 1
       sudo pacman -S $argv[2..-1]
     case 2
-      trizen -S --aur $argv[2..-1]
+      yay -S --aur $argv[2..-1]
   end
 end
 
@@ -22,15 +22,15 @@ function uninstall --description 'Uninstall a package along with its config and 
     case 1
       sudo pacman -Rns $argv[2..-1]
     case 2
-      trizen -Rns $argv[2..-1]
+      yay -Rns $argv[2..-1]
   end
 end
 
 function update --description 'Update Manjaro and AUR packages'
-  sudo pacman -Syu; trizen --aur -Syu
+  sudo pacman -Syu; yay --aur -Syu
 end
 
-function downgrade --description 'Downgrade or install a package'
+function downgrade --description 'Downgrade a package'
   sudo pacman -U $argv
 end
 
@@ -39,7 +39,7 @@ function orphans --description 'Remove orphan packages'
 end
 
 function clean --description 'Remove outdated/untracked packages'
-  sudo pacman -Sc; trizen -Sc
+  sudo pacman -Sc; yay -Sc
 end
 
 function dbsync --description 'Updates Manjaro repos and syncs the DB'
@@ -162,3 +162,9 @@ function ftm --description 'Converts .flac files to .mp3'
   parallel lame {} -m j -V 0 -q 0 --lowpass 19.5 --vbr-new -b 32 --replaygain-accurate --out-dir mp3/ ::: ./tmp/*.wav
   rm -rf tmp/
 end
+
+# Misc
+function weather --description 'Fetch current weather for location passed as argv'
+  curl wttr.in/$argv
+end
+
