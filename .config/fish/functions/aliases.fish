@@ -145,22 +145,42 @@ end
 # This script is intended to be used on the folder where the .flac
 # files you want to convert are located
 function ftm --description 'Converts .flac files to .mp3'
-  mkdir tmp/ mp3/
+  mkdir ./{tmp,mp3}
+
   # Flags used for processing .flac files:
   # -d              -> Decode the given file into .wav
+  # --silent        -> Silence FLAC encoder/decoder information
   # --output-prefix -> Save the final file to tmp/ folder
-  parallel flac -d --output-prefix=tmp/ {} ::: ./*.flac
+  echo "Processing .flac files"
+  parallel flac -d --silent --output-prefix=tmp/ {} ::: ./*.flac
+
+  if test ! $status -eq 0
+    echo "Something went wrong while processing .flac files. Exiting now."
+    return 1
+  else
+    echo "Your .flac files were successfully processed! 🎉"
+  end
+
   # Flags used for processing .wav files:
   # -m j                  -> 'Joint stereo' channel setting
   # -V 0                  -> Enable VBR at the highest quality
   # -q 0                  -> Use the best algorithms to achieve the highest quality given the file's bitrate
-  # --lowpass 19.5        -> Cutoff frequencies above 19.5 kHz
+  # --lowpass 22.1        -> Cutoff frequencies above 22.1 kHz
   # -b 32                 -> Sampling frecuency
   # --vbr-new             -> Latest VBR algorithm, faster than `--vbr-old`
   # --replaygain-accurate -> Determine real peak sample
+  # --silent              -> Silence LAME encoder/decoder information
   # --out-dir mp3/        -> Output the converted files to mp3/ folder
-  parallel lame {} -m j -V 0 -q 0 --lowpass 19.5 --vbr-new -b 32 --replaygain-accurate --out-dir mp3/ ::: ./tmp/*.wav
-  rm -rf tmp/
+  echo "Processing .wav files"
+  parallel lame -m j -V 0 -q 0 --lowpass 22.1 --vbr-new -b 32 --replaygain-accurate --silent --out-dir mp3/ {} ::: ./tmp/*.wav
+
+  if test ! $status -eq 0
+    echo "Something went wrong while processing .wav files. Exiting now."
+    return 1
+  else
+    echo "Your .wav were successfully converted to HQ .mp3 files! 🎉"
+    rm -rf tmp/
+  end
 end
 
 # Misc
