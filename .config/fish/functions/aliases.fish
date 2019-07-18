@@ -35,7 +35,14 @@ function downgrade --description 'Downgrade a package'
 end
 
 function orphans --description 'Remove orphan packages'
-  sudo pacman -Rns (pacman -Qtdq)
+  pacman -Qtdq
+
+  if test ! $status -eq 0
+    echo "Your system is clean of orphaned packages. Exiting now."
+  else
+    echo "Orphaned packages found, uninstalling..."
+    sudo pacman -Rns (pacman -Qtdq)
+  end
 end
 
 function clean --description 'Remove outdated/untracked packages'
