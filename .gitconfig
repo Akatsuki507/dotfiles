@@ -5,6 +5,7 @@
 [core]
 	editor       = nano
 	excludesfile = /home/aitbw/.gitignore_global
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [commit]
 	template  = /home/aitbw/.git_commit_msg.txt         # Template for commit messages
 	gpgsign   = true                                    # Automatically sign commits
@@ -60,3 +61,15 @@
 	default = current # Push the current branch to a remote of the same name
 [rebase]
   autoStash = true
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
