@@ -24,3 +24,4 @@ source ~/.config/fish/functions/aliases.fish
 source ~/.asdf/asdf.fish
 
 status --is-interactive; and source (pyenv init -|psub)
+set -gx GOPATH $HOME/go; set -gx GOROOT $HOME/.go; set -gx PATH $GOPATH/bin $PATH; # g-install: do NOT edit, see https://github.com/stefanmaric/g
